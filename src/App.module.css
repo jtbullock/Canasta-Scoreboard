@@ -1,0 +1,8 @@
+.App {
+    padding: 1em;
+    display: flex;
+}
+
+.Content {
+    flex: 1;
+}
