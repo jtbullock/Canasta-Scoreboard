@@ -12,7 +12,7 @@ export default function GameSetup({onSubmit}) {
         } else if (playerNames.length < numberOfPlayers) {
             setPlayerNames(immutablePush(playerNames, ''));
         }
-    }, [numberOfPlayers]);
+    }, [numberOfPlayers, playerNames]);
 
     function updatePlayerName(index, newName) {
         setPlayerNames(immutableUpdateByIndex(playerNames, index, newName));
