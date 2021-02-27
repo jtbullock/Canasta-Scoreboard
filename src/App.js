@@ -1,7 +1,7 @@
 import './App.css';
 import styles from './App.module.css';
-import ScoringGuide from "./components/scoring-guide";
-import GameSetup from "./components/game-setup";
+import ScoringGuide from "./components/scoring-guide/scoring-guide";
+import GameSetup from "./components/game-setup/game-setup";
 import {useState, useEffect} from 'react';
 
 function App() {
@@ -14,8 +14,9 @@ function App() {
 
     return (
         <div className={styles.App}>
-
             <div className={styles.Content}>
+                <div className={styles.Title}>Canasta Scoreboard</div>
+
                 <GameSetup onSubmit={setGameConfig} />
             </div>
 

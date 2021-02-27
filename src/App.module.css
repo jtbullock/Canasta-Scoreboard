@@ -3,6 +3,13 @@
     display: flex;
 }
 
+.Title {
+    font-size: 1.75em;
+    margin-bottom: .5em;
+    color: #2c1a58;
+}
+
 .Content {
     flex: 1;
+    margin-right: 3em;
 }
