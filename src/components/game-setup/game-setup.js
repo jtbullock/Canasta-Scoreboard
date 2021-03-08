@@ -1,5 +1,5 @@
-import {useEffect, useState} from "react";
-import {immutablePop, immutablePush, immutableUpdateByIndex} from "../../lib/immutable-array";
+import {useState, useEffect} from "react";
+import {immutablePop, immutablePush, immutableUpdateByIndexWithObject} from "../../lib/immutable-array";
 import styles from './game-setup.module.css';
 import classNames from 'classnames';
 
@@ -8,6 +8,7 @@ export default function GameSetup({onSubmit}) {
     const [playerNames, setPlayerNames] = useState(['', '']);
     const [playingAs, setPlayingAs] = useState('Teams');
 
+    // Sync player names with number of players.
     useEffect(() => {
         if (playerNames.length > numberOfPlayers) {
             setPlayerNames(immutablePop(playerNames)[1]);
@@ -16,6 +17,7 @@ export default function GameSetup({onSubmit}) {
         }
     }, [numberOfPlayers, playerNames]);
 
+    // Set number of players to two if playing as teams.
     useEffect(() => {
         if(playingAs === 'Teams')
         {
@@ -24,7 +26,7 @@ export default function GameSetup({onSubmit}) {
     }, [playingAs]);
 
     function updatePlayerName(index, newName) {
-        setPlayerNames(immutableUpdateByIndex(playerNames, index, newName));
+        setPlayerNames(immutableUpdateByIndexWithObject(playerNames, index, newName));
     }
 
     function buildConfigAndSubmit() {

@@ -1,0 +1,9 @@
+.ScoreColumns {
+    display: flex;
+    flex-direction: row;
+}
+
+.TotalCell {
+    margin-left: 0.5em;
+    border: solid 1px transparent; /* Line up with inputs */
+}

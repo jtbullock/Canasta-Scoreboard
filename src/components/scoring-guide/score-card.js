@@ -1,10 +1,11 @@
 import propTypes from 'prop-types';
+import {Card, CardTitle} from "../card/card";
 import styles from './score-card.module.css';
 
 export default function ScoreCard({title, scores}) {
     return (
-        <div className={styles.scoreCard}>
-            <div className={styles.scoreCardTitle}>{title}</div>
+        <Card>
+            <CardTitle style={{textAlign: 'center'}}>{title}</CardTitle>
 
             <table className={styles.scoreTable}>
                 <tbody>
@@ -16,7 +17,7 @@ export default function ScoreCard({title, scores}) {
                     ))}
                 </tbody>
             </table>
-        </div>
+        </Card>
     );
 }
 

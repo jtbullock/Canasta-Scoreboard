@@ -1,0 +1,4 @@
+.PreviousRounds {
+    display: flex;
+    flex-direction: row;
+}

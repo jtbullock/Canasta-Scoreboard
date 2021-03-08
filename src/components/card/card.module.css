@@ -1,0 +1,18 @@
+.Card {
+    border: solid 1px lightgray;
+    border-radius: 0.3em;
+    overflow: hidden;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    box-shadow: 2px 2px 2px #f1f1f1;
+}
+
+.CardTitle {
+    margin: 0.5em 0.5em 0.25em 0.5em;
+    font-weight: bold;
+}
+
+.CardBody {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}

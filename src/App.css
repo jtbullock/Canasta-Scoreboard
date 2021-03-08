@@ -45,11 +45,15 @@ table {
     border-radius: 0 0.3em 0.3em 0;
 }
 
-input[type='text'] {
+input[type='text'], input[type='number'] {
     border: solid 1px lightgray;
     border-radius: 0.3em;
     padding: 0.25em 0.5em;
     font-size: 1em;
+}
+
+input[type='number'] {
+    width: 100px;
 }
 
 button {

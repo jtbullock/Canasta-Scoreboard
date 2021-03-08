@@ -6,7 +6,7 @@ export function immutablePush(array, newItem) {
     return [...array, newItem];
 }
 
-export function immutableUpdateByIndex(array, updateIndex, updatedItem) {
+export function immutableUpdateByIndexWithObject(array, updateIndex, updatedItem) {
     return array.map((item, index) => {
         if(index !== updateIndex)
         {
@@ -14,5 +14,16 @@ export function immutableUpdateByIndex(array, updateIndex, updatedItem) {
         }
 
         return updatedItem;
+    });
+}
+
+export function immutableUpdateByIndexWithFn(array, updateIndex, updateFn) {
+    return array.map((item, index) => {
+        if(index !== updateIndex)
+        {
+            return item;
+        }
+
+        return updateFn(item);
     });
 }
